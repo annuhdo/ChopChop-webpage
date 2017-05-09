@@ -5,7 +5,6 @@ const hamburgerOpened = document.querySelector("#hamburger-opened");
 const mobileMenu = document.querySelector(".mobile-menu");
 const body = document.querySelector("body");
 
-console.log(mobileMenu);
 
 mobileBurger.addEventListener("click", showMenu);
 
@@ -21,7 +20,7 @@ function showMenu(e) {
 	else {
 		hamburgerOpened.style.display = "none";
 		hamburger.style.display = "flex";
-		mobileMenu.style.margin = "-100% 0 0 0";
+		mobileMenu.style.margin = "-460px 0 0 0";
 		body.style.overflow = "scroll";
 		body.style.overflowX = "hidden";
 	}

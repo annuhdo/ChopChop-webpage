@@ -3,12 +3,21 @@
 
 body 
 	overflow-x: hidden
+	width: 100vw
 	font-family: "akagi-pro",sans-serif
 	font-style: normal
 	font-weight: 200
 	font-size: 62.5%
 	line-height: 1.8
 	color: #151515
+
+.wavy-blob
+	position: absolute
+	right: 0
+	top: 0
+	width: 60%
+	z-index: -1
+	overflow: hidden
 
 h1
 	font-family: "soleil",sans-serif
@@ -35,7 +44,7 @@ a
 	align-items: center
 	justify-content: left
 	line-height: 2.4
-	margin-top: -400px
+	margin-top: -460px
 	transition: all 0.2s
 	
 
@@ -198,13 +207,7 @@ a
 
 	a
 		color: #fff
-		
-	.wavy-blob
-		position: absolute
-		left: 50%
-		top: 0
-		width: 1000px
-		z-index: -1
+	
 	
 	.hero-content
 		position: relative
@@ -223,13 +226,13 @@ a
 			margin-right: auto
 			margin-top: 50px
 			order: 1
-			padding-right: 40px
+			padding-right: 60px
 
 			.hero-title
 				font-family: "soleil",sans-serif
 				font-style: normal
 				font-weight: 500
-				font-size: 2.8em
+				font-size: 3.2em
 				z-index: 1
 				line-height: 1.4
 				display: block
@@ -241,9 +244,9 @@ a
 				max-width: 380px
 
 			.hero-cta
-				margin-top: 70px
-				width: 98%
-				padding: 30px 0
+				margin-top: 50px
+				padding: 30px 50px
+				display: inline-block
 				background: #FFF150
 				box-sizing: border-box
 				text-align: center
@@ -255,7 +258,7 @@ a
 	
 
 		.chopchop
-			width: 420px
+			width: 520px
 			height: 355px
 			position: relative
 			position: inline-block
@@ -410,7 +413,9 @@ footer
 			margin-top: 100px
 
 	
-	
+@media screen and (max-width: 1220px)
+	.hero
+		overflow: hidden
 @media screen and (max-width: 1090px)
 	.hero
 		.wavy-blob
@@ -429,7 +434,7 @@ footer
 	#mobile-burger
 		display: none
 		
-@media screen and (max-width: 960px)
+@media screen and (max-width: 970px)
 	.hero
 		.wavy-blob
 			left: 40%
@@ -438,6 +443,9 @@ footer
 			.hero-txt
 				.hero-title
 					font-size: 2.3em
+		
+				.hero-cta
+					padding: 30px 30px
 		
 	.video-section
 		.video-content
@@ -499,17 +507,17 @@ footer
 			align-items: center
 	
 			.hero-txt
-				padding-right: 0
+				padding-right: 0px
 				margin-right: auto
 		
 				.hero-title
-					font-size: 2.8em
+					font-size: 2.6em
 		
 				.hero-subtitle
 					max-width: 340px
 		
 			.chopchop
-				width: 240px
+				width: 340px
 				height: 355px
 		
 	#mobile-burger
@@ -716,3 +724,10 @@ footer
 					ul > li
 						margin-left: 0
 						display: block
+			
+@media screen and (max-width: 390px)
+	.mobile-menu
+		padding-left: 10px
+		padding-right: 10px
+		.mobile-nav
+			margin: 0 auto
