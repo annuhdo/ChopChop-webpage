@@ -9,9 +9,8 @@ const body = document.querySelector("body");
 mobileBurger.addEventListener("click", showMenu);
 
 function showMenu(e) {
-	opened = !opened
-	
-	console.log(mobileTop);
+	e.preventDefault();
+	opened = !opened;
 	
 	if (opened) {
 		mobileTop.className += " opened";
