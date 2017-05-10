@@ -6,7 +6,7 @@ const mobileMenu = document.querySelector(".mobile-menu");
 const body = document.querySelector("body");
 
 
-mobileBurger.addEventListener("click", showMenu);
+mobileBurger.addEventListener("touchstart click", showMenu);
 
 function showMenu(e) {
 	opened = !opened
