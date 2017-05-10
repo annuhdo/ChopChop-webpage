@@ -683,8 +683,8 @@ footer .footer-content .copyright {
 }
 @media screen and (max-width: 390px) {
   .mobile-menu {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
   .mobile-menu .mobile-nav {
     margin: 0 auto;
