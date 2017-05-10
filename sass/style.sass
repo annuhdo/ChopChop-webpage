@@ -59,107 +59,49 @@ a
 			width: 100%
 	
 #mobile-burger
-	display: none
-
-#hamburger
-	display: flex
-	align-items: center
-	font-size: 16px
-	padding: 5px 10px 5px 3px
-	font-family: "soleil", sans-serif
-	font-style: normal
-	font-weight: 500
-	background: #fff
-	position: fixed
+	z-index: 999
+	position: absolute
+	//background: orange
+	//float: right
 	right: 30px
 	top: 30px
-	color: #151515
-	z-index: 999
-	display: flex
-	width: 85px
-	transition: transform .3s ease-out
-	
-	.menu
+	padding: 5px 10px 5px 2px
+	font:
+		size: 1.6em
+	background: #fff
+	display: none
+	align-items: center
+
+	.mobile-burger
 		position: relative
 		width: 40px
 		height: 40px
-		display: inline-block
+		margin-right: 5px
 	
-		&:before
-			content: ""
+		.top
+			height: 2px
+			background: #151515
 			position: absolute
 			top: 16px
 			left: 10px
 			right: 10px
+			transition: all 0.3s
+
+		.bottom
 			height: 2px
 			background: #151515
-			-webkit-transition: -webkit-transform .3s ease-out
-			transition: transform .3s ease-out
-			transition: transform .3s ease-out,-webkit-transform .3s ease-out
-
-		&:after
-			content: ""
 			position: absolute
 			bottom: 16px
 			left: 10px
 			right: 10px
-			height: 2px
-			background: #151515
-			-webkit-transition: -webkit-transform .3s ease-out
-			transition: transform .3s ease-out
-			transition: transform .3s ease-out,-webkit-transform .3s ease-out
+			transition: all 0.3s
 	
-#hamburger-opened
-	display: flex
-	align-items: center
-	font-size: 16px
-	padding: 5px 10px 5px 3px
-	font-family: "soleil", sans-serif
-	font-style: normal
-	font-weight: 500
-	background: #fff
-	position: fixed
-	right: 30px
-	top: 30px
-	color: #151515
-	z-index: 999
-	display: none
-	width: 85px
-	transition: transform .3s ease-out
+		.top.opened
+			top: 18px
 	
-	.close
-		position: relative
-		width: 40px
-		height: 40px
-		display: inline-block
-	
-		&:before
-			content: ""
-			position: absolute
-			top: 16px
-			left: 12px
-			right: 12px
-			height: 2px
-			background: #151515
-			-webkit-transition: -webkit-transform .3s ease-out
-			transition: transform .3s ease-out
-			transition: transform .3s ease-out,-webkit-transform .3s ease-out
-			-webkit-transform: translateY(3px) rotate(135deg)
-			transform: translateY(3px) rotate(135deg)
+		.bottom.opened
+			bottom: 20px
 
-		&:after
-			content: ""
-			position: absolute
-			bottom: 16px
-			left: 12px
-			right: 12px
-			height: 2px
-			background: #151515
-			-webkit-transition: -webkit-transform .3s ease-out
-			transition: transform .3s ease-out
-			transition: transform .3s ease-out,-webkit-transform .3s ease-out
-			-webkit-transform: translateY(-3px) rotate(45deg)
-			transform: translateY(-3px) rotate(45deg)
 
 .navigation
 	//height: 50px
@@ -528,6 +470,7 @@ footer
 		width: 60%
 	
 	#mobile-burger
+		display: -webkit-flex
 		display: flex
 	
 	.hero
@@ -701,6 +644,7 @@ footer
 		padding-bottom: 30px
 	
 	#mobile-burger
+		display: -webkit-flex
 		display: flex
 	
 	footer

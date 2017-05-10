@@ -63,109 +63,45 @@ a {
 }
 
 #mobile-burger {
-  display: none;
-}
-
-#hamburger {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  padding: 5px 10px 5px 3px;
-  font-family: "soleil", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  background: #fff;
-  position: fixed;
+  z-index: 999;
+  position: absolute;
   right: 30px;
   top: 30px;
-  color: #151515;
-  z-index: 999;
-  display: flex;
-  width: 85px;
-  transition: transform 0.3s ease-out;
+  padding: 5px 10px 5px 2px;
+  font-size: 1.6em;
+  background: #fff;
+  display: none;
+  align-items: center;
 }
-#hamburger .menu {
+#mobile-burger .mobile-burger {
   position: relative;
   width: 40px;
   height: 40px;
-  display: inline-block;
+  margin-right: 5px;
 }
-#hamburger .menu:before {
-  content: "";
+#mobile-burger .mobile-burger .top {
+  height: 2px;
+  background: #151515;
   position: absolute;
   top: 16px;
   left: 10px;
   right: 10px;
+  transition: all 0.3s;
+}
+#mobile-burger .mobile-burger .bottom {
   height: 2px;
   background: #151515;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
-}
-#hamburger .menu:after {
-  content: "";
   position: absolute;
   bottom: 16px;
   left: 10px;
   right: 10px;
-  height: 2px;
-  background: #151515;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  transition: all 0.3s;
 }
-
-#hamburger-opened {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  padding: 5px 10px 5px 3px;
-  font-family: "soleil", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  background: #fff;
-  position: fixed;
-  right: 30px;
-  top: 30px;
-  color: #151515;
-  z-index: 999;
-  display: none;
-  width: 85px;
-  transition: transform 0.3s ease-out;
+#mobile-burger .mobile-burger .top.opened {
+  top: 18px;
 }
-#hamburger-opened .close {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-}
-#hamburger-opened .close:before {
-  content: "";
-  position: absolute;
-  top: 16px;
-  left: 12px;
-  right: 12px;
-  height: 2px;
-  background: #151515;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
-  -webkit-transform: translateY(3px) rotate(135deg);
-  transform: translateY(3px) rotate(135deg);
-}
-#hamburger-opened .close:after {
-  content: "";
-  position: absolute;
-  bottom: 16px;
-  left: 12px;
-  right: 12px;
-  height: 2px;
-  background: #151515;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
-  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
-  -webkit-transform: translateY(-3px) rotate(45deg);
-  transform: translateY(-3px) rotate(45deg);
+#mobile-burger .mobile-burger .bottom.opened {
+  bottom: 20px;
 }
 
 .navigation {
@@ -538,6 +474,7 @@ footer .footer-content .copyright {
   }
 
   #mobile-burger {
+    display: -webkit-flex;
     display: flex;
   }
 
@@ -716,6 +653,7 @@ footer .footer-content .copyright {
   }
 
   #mobile-burger {
+    display: -webkit-flex;
     display: flex;
   }
 
